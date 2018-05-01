@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/TargetNumber"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="77dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="11dp"
+        android:ems="10"
+        android:hint="@string/value_after_convert"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/Convert"
+        app:layout_constraintEnd_toStartOf="@+id/TargetCurrency"
+        app:layout_constraintStart_toEndOf="@+id/EqualSign" />
+
+    <Spinner
+        android:id="@+id/TargetCurrency"
+        android:layout_width="126dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="79dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/Convert"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/Convert"
+        android:layout_width="230dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="82dp"
+        android:text="@string/convert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/OriginalCurrency"
+        android:layout_width="126dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="59dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textRate"
+        android:layout_width="63dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp"
+        android:text="@string/rate"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        app:layout_constraintBottom_toTopOf="@+id/TargetNumber"
+        app:layout_constraintEnd_toStartOf="@+id/Rate"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OriginalNumber" />
+
+    <TextView
+        android:id="@+id/Rate"
+        android:layout_width="189dp"
+        android:layout_height="83dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="56sp"
+        app:layout_constraintBottom_toTopOf="@+id/TargetNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OriginalNumber" />
+
+    <TextView
+        android:id="@+id/EqualSign"
+        android:layout_width="33dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="216dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp"
+        android:text="@string/equalsign"
+        android:textSize="56sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/OriginalNumber"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="58dp"
+        android:ems="10"
+        android:hint="@string/input_amount_here"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/OriginalCurrency"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

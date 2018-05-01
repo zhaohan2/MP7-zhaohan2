@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MP7-zhaohan2</string>
+    <string name="value_after_convert">Value after convert</string>
+    <string name="convert">CONVERT</string>
+    <string name="rate">Rate:</string>
+    <string name="equalsign">=</string>
+    <string name="input_amount_here">Input Amount Here</string>
+
+
+</resources>
