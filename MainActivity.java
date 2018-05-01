@@ -20,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
     String targetCurrency;
     Button convertButton;
     EditText originalNumber;
-    double originalAmount;
-    double targetAmount;
-    double ratio;
+    float originalAmount;
+    float targetAmount;
+    float ratio;
     TextView tgt;
     TextView rate;
 
@@ -93,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "Button clicked");
                 if (findViewById(R.id.OriginalNumber).toString() != null) {
                     originalAmount = Integer.valueOf(originalNumber.getText().toString());
+                    CurrencyRateFromAPI calculator = new CurrencyRateFromAPI();
+                    ratio = calculator.getRate(originalCurrency,targetCurrency);
                     targetAmount = originalAmount * ratio;
                     tgt.setText(String.valueOf(targetAmount));
                 }
